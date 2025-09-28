@@ -1,7 +1,7 @@
 # Stellar Motion Visualization
 
 ## Overview
-This project visualizes the motion of stars from the Hipparcos star catalog over 100,000 years, creating both static visualizations and an animated representation. The visualization transforms astronomical data into an artistic and informative display, showcasing stellar positions, magnitudes, colors, and proper motions. The project applies data processing and visualization techniques, including CSV handling, matplotlib plotting, and SVG output, inspired by concepts from Week 02 of a creative programming course.
+This project visualizes the motion of stars from the Hipparcos star catalog over 100,000 years, creating static visualizations, an animated representation, and an interactive 3D visualization. The visualization transforms astronomical data into an artistic and informative display, showcasing stellar positions, magnitudes, colors, and proper motions. The project applies data processing and visualization techniques, including CSV handling, matplotlib plotting, SVG output,and interactive 3D plotting with Plotly, inspired by concepts from Week 02 of a creative programming course.
 
 ## Data Source
 The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/datasets/konivat/hipparcos-star-catalog/data) on Kaggle. The dataset (`hipparcos-voidmain.csv`) contains astrometric and photometric data for stars, including right ascension (RAdeg), declination (DEdeg), visual magnitude (Vmag), proper motions (pmRA, pmDE), and B-V color index.
@@ -14,12 +14,13 @@ The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/dat
   - Box plot of proper motions (pmRA and pmDE).
   - Scatter plot of distance vs magnitude.
 - **Dynamic Visualization**: Creates an animation showing the motion of stars over 100,000 years based on proper motions, saved as an MP4 (if FFmpeg is installed) or GIF.
+- **3D Interactive Visualization**: Creates an interactive 3D plot using Plotly
 - **File Management**: Lists all generated files for cleanup, following best practices.
 
 ## Requirements
 - **Python Libraries**:
   ```bash
-  pip install pandas matplotlib numpy
+  pip install pandas matplotlib numpy plotly
   ```
 - **FFmpeg** (optional, for MP4 output):
   - Install FFmpeg and add it to your system PATH (see [FFmpeg installation guide](https://ffmpeg.org/download.html)).
@@ -31,7 +32,7 @@ The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/dat
 2. Place the `hipparcos-voidmain.csv` file in the project directory.
 3. Install required Python libraries:
    ```bash
-   pip install pandas matplotlib numpy
+   pip install pandas matplotlib numpy plotly
    ```
 4. (Optional) Install FFmpeg for MP4 output:
    - Windows: Download from [gyan.dev](https://github.com/GyanD/codexffmpeg/releases), extract, and add the `bin` folder to your system PATH.
@@ -51,12 +52,15 @@ The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/dat
 ## Output Files
 - `hipparcos_static_viz.svg`: Static visualizations of star data.
 - `stellar_motion.mp4` or `stellar_motion.gif`: Animation of stellar motion over 100,000 years.
+- `hipparcos_3d_interactive.html`: Interactive 3D visualization of star positions and properties.
+- `hipparcos_3d_interactive_animation.html`: Interactive 3D animation of star positions and properties.
 - Note: Only files successfully created will be listed at the end of the script run.
 
 ## Notes
 - The script limits the dataset to the brightest 5000 stars for performance.
 - The animation covers 100,000 years in 1000-year steps, showing how stars move based on proper motions.
 - B-V color index is used to color stars, representing temperature (blue for hotter, red for cooler).
+- The 3D interactive visualization allows users to rotate, zoom, and explore star data in three dimensions.
 - Ensure FFmpeg is installed for MP4 output; otherwise, a GIF will be generated, which may be larger in size.
 
 ## Acknowledgments
