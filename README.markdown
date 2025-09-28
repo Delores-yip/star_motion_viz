@@ -62,3 +62,5 @@ The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/dat
 ## Acknowledgments
 - Data provided by the [Hipparcos Star Catalog](https://www.kaggle.com/datasets/konivat/hipparcos-star-catalog/data) on Kaggle.
 - Inspired by Week 02 of a creative programming course, focusing on data processing, matplotlib visualization, and SVG output.
+
+License: This project is for educational purposes and not licensed for public distribution.
