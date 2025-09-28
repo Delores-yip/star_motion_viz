@@ -47,6 +47,8 @@ The data is sourced from the [Hipparcos Star Catalog](https://www.kaggle.com/dat
 3. The script will:
    - Generate static visualizations saved as `hipparcos_static_viz.svg`.
    - Create an animation saved as `stellar_motion.mp4` (or `stellar_motion.gif` if FFmpeg is unavailable).
+   - Generate an interactive 3D visualization as an HTML file.
+   - Generate an interactive 3D animation as an HTML file.
    - List all generated files.
 
 ## Output Files
